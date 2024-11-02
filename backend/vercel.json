@@ -5,8 +5,13 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.js" },
+    { "src": "/hi", "dest": "/index.js" },
+    { "src": "/form", "dest": "/index.js" },
+    { "src": "/id", "dest": "/index.js" },
+    { "src": "/users", "dest": "/index.js" },
+    { "src": "/shop", "dest": "/index.js" },
+    { "src": "/singleItem", "dest": "/index.js" },
     { "src": "/news", "dest": "/index.js" }
-    
   ]
 
 }
