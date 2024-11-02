@@ -19,7 +19,6 @@ function App() {
     };
     fetchData();
   }, []);
-  console.log(name);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -52,6 +51,9 @@ function App() {
   return (
     <div className="App">
       <h1>Latest Tesla News</h1>
+      {name.map((i, index) => (
+        <p key={index}>{i.name}</p>
+      ))}
       {error && <p className="error">{error}</p>}
       {loading ? (
         <p>Loading...</p>
