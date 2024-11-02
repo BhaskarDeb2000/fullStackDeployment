@@ -12,7 +12,9 @@ function App() {
   const pageSize = 5;
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5001/users");
+      const response = await axios.get(
+        "https://full-stack-deployment-sandy.vercel.app/users"
+      );
       setName(response.data.data);
     };
     fetchData();
