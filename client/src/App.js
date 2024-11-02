@@ -25,7 +25,7 @@ function App() {
       setError(null); // Reset error on new request
       try {
         const response = await axios.get(
-          `http://localhost:5001/news?page=${page}&pageSize=${pageSize}`
+          `https://full-stack-deployment-sandy.vercel.app/news?page=${page}&pageSize=${pageSize}`
         );
         setNews(response.data.articles);
         setTotalResults(response.data.totalResults);
@@ -50,9 +50,6 @@ function App() {
   return (
     <div className="App">
       <h1>Latest Tesla News</h1>
-      {name.map((i, index) => (
-        <p key={index}>{i.name}</p>
-      ))}
       {error && <p className="error">{error}</p>}
       {loading ? (
         <p>Loading...</p>
