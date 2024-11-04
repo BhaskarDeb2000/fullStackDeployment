@@ -54,6 +54,21 @@ const eCommerce = [
   { id: 4, item: "kukuri" },
 ];
 
+const tasks = [
+  {
+    id: 1,
+    task: "clean room",
+  },
+  {
+    id: 2,
+    task: "call doctor",
+  },
+  {
+    id: 3,
+    task: "finish react router dom",
+  },
+];
+
 app.get("/id", (req, res) => {
   const nameId = parseInt(req.query.id);
   console.log(nameId);
@@ -84,6 +99,10 @@ app.get("/singleItem", (req, res) => {
   } else {
     res.status(404).send("Error");
   }
+});
+
+app.get("/tasks", (req, res) => {
+  res.json({ tasks });
 });
 
 app.listen(PORT, () => {
